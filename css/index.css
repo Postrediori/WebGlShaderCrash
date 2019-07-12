@@ -11,14 +11,16 @@ canvas {
 }
 
 #hud {
-    top: 0px;
-    right: 0px;
-    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
 }
 
 #hud a {
     text-decoration: underline;
     color: #333333;
+    font-weight: bold;
 }
 
 #hud a:link {
