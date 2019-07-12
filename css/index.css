@@ -1,0 +1,30 @@
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#hud {
+    top: 0px;
+    right: 0px;
+    text-align: right;
+}
+
+#hud a {
+    text-decoration: underline;
+    color: #333333;
+}
+
+#hud a:link {
+    color: #333333;
+}
+
+#hud a:visited {
+    color: #333333;
+}
