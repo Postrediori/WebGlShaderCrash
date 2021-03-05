@@ -6,8 +6,7 @@ var main = function () {
 
     var projectionMatrix = makePerspectiveMatrix(new Float32Array(16), FOV, MIN_ASPECT, NEAR, FAR);
     var viewMatrix = makeIdentityMatrix(new Float32Array(16));
-    var distanceTranslationMatrix = makeIdentityMatrix(new Float32Array(16));
-    distanceTranslationMatrix[14] = -CAMERA_DISTANCE;
+    var distanceTranslationMatrix = makeTranslationMatrix(new Float32Array(16), new Float32Array([0, 0, -CAMERA_DISTANCE]));
     premultiplyMatrix(viewMatrix, viewMatrix, distanceTranslationMatrix);
     
     var onresize = function () {

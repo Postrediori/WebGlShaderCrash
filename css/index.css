@@ -31,3 +31,40 @@ canvas {
 #hud a:visited {
     color: #333333;
 }
+
+.description {
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    top: 20%;
+}
+
+#title {
+    font-size: xx-large;
+}
+
+#subtitle {
+    font-size: x-large;
+}
+
+.shader {
+    position: absolute;
+    bottom: 20px;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    z-index: 3;
+    bottom: 100px;
+    background-color: white;
+    font-size: x-large;
+}
+
+.shader > span > span {
+    text-decoration: underline;
+}
+
+#shader-universal {
+    left: 100px;
+}
+
+#shader-no-windows {
+    right: 100px;
+}

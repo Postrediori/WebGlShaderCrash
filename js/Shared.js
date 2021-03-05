@@ -10,7 +10,7 @@ var CLEAR_COLOR = [0.5, 0.5, 0.5, 1.0];
 var SIZE_OF_FLOAT = 4;
 
 var FOV = (60 / 180) * Math.PI,
-    NEAR = 1,
+    NEAR = 0.1,
     FAR = 10000,
     MIN_ASPECT = 16 / 9;
 
@@ -111,6 +111,26 @@ var makeYRotationMatrix = function (matrix, angle) {
     matrix[12] = 0.0;
     matrix[13] = 0.0;
     matrix[14] = 0.0;
+    matrix[15] = 1.0;
+    return matrix;
+};
+
+var makeTranslationMatrix = function (matrix, vector) {
+    matrix[0] = 1.0;
+    matrix[1] = 0.0;
+    matrix[2] = 0.0;
+    matrix[3] = 0.0;
+    matrix[4] = 0.0;
+    matrix[5] = 1.0;
+    matrix[6] = 0.0;
+    matrix[7] = 0.0;
+    matrix[8] = 0.0;
+    matrix[9] = 0.0;
+    matrix[10] = 1.0;
+    matrix[11] = 0.0;
+    matrix[12] = vector[0];
+    matrix[13] = vector[1];
+    matrix[14] = vector[2];
     matrix[15] = 1.0;
     return matrix;
 };

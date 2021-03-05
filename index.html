@@ -2,9 +2,9 @@
 
 <html>
     <head>
-        <title>WebGl Cube Demo</title>
+        <title>WebGl Windows Bug Demo</title>
 
-        <meta name="description" content="Simple demo of drawing a cube using WebGL." />
+        <meta name="description" content="Demo of a certain Windows-specific WebGL bug" />
 
         <meta charset="utf-8" />
 
@@ -14,7 +14,12 @@
     <body>
         <canvas id="simulator"></canvas>
 
-        <div id="hud"><a href="https://postrediori.github.io">Rasim Labibov</a> | <a href="https://github.com/Postrediori/WebGlCube">Code</a></div>
+        <div id="hud"><a href="https://postrediori.github.io">Rasim Labibov</a> | <a href="https://github.com/Postrediori/WebGlWindowsShader">Code</a></div>
+
+        <div class="description" id="title"><span>Windows-specific shader crash</span></div>
+        <div class="description" id="subtitle"><span>Two cubes are the same on macOS and Linux, but different on Windows</span></div>
+        <div class="shader" id="shader-universal"><span>gl_FragColor = <b>shade()</b> * <span>color()</span>;</span></div>
+        <div class="shader" id="shader-no-windows"><span>gl_FragColor = <span>color()</span> * <b>shade()</b>;</span></div>
 
         <script type="text/javascript" src="js/Shared.js"></script>
         <script type="text/javascript" src="js/Simulation.js"></script>
